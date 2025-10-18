@@ -1,0 +1,155 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --clr-bg: #ffe8d6;
+  --clr-white: #fff;
+  --clr-dark: #660013;
+  --clr-gray: #ccd6eb;
+  --clr-footer: hsl(228, 45%, 44%);
+  --clr-h2: rgba(159, 91, 61, 0.9);
+  --clr-pink: rgba(255, 179, 193, 0.1);
+
+  --fs-h1: clamp(2rem, 4vw + 1rem, 3.5rem);
+  --fs-h2: clamp(1.25rem, 2vw + 1rem, 2rem);
+  --fs-base: 1rem;
+  --padding-section: 1.5rem;
+  --min-width: 320px;
+  --radius: 1rem;
+}
+
+body {
+  background-color: var(--clr-bg);
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  background-color: var(--clr-white);
+  min-width: var(--min-width);
+  width: 80%;
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: justify;
+  margin: 4rem auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-family: "Young Serif", sans-serif;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  margin: 1rem 0;
+}
+
+h2 {
+  color: var(--clr-h2);
+  font-size: var(--fs-h2);
+  margin-bottom: 0.75rem;
+}
+
+section {
+  margin-top: var(--padding-section);
+}
+
+.prep-heading {
+  color: var(--clr-dark);
+  font-size: clamp(1.25rem, 2vw + 1rem, 2rem);
+}
+
+.preparation {
+  background-color: var(--clr-pink);
+  padding: 1.25rem;
+  border-radius: var(--radius);
+}
+
+.preparation li::marker {
+  color: var(--clr-dark);
+}
+
+ul,
+ol {
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+li::marker {
+  color: var(--clr-h2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0.25rem 1rem;
+  text-align: left;
+}
+
+td:nth-child(2) {
+  color: var(--clr-h2);
+  font-weight: 600;
+}
+
+tr:not(:last-child) td {
+  border-bottom: 1px solid var(--clr-gray);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--clr-gray);
+  margin: 2rem 0;
+  opacity: 0.6;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.attribution a {
+  color: var(--clr-footer);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
